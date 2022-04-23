@@ -33,7 +33,7 @@ jobs:
       - name: Lint
         run: nr lint
 
-  typecheck:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -53,8 +53,8 @@ jobs:
       - name: Install
         run: nci
 
-      - name: Typecheck
-        run: nr typecheck
+      - name: check:type
+        run: nr check:type
 
   test:
     runs-on: ${{ matrix.os }}
