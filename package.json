@@ -4,10 +4,6 @@
   "packageManager": "pnpm@^6",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/BuptStEve/pkg__name#readme",
-  "bugs": {
-    "url": "https://github.com/BuptStEve/pkg__name/issues"
-  },
   "license": "MIT",
   "author": "StEve YoUng <2747745470@qq.com>",
   "repository": {
@@ -24,14 +20,6 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
   "files": [
     "dist"
   ],
@@ -42,23 +30,36 @@
     "build": "rimraf dist && unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
+    "lint:fix": "nr lint --fix",
     "prepublishOnly": "nr build",
-    "release": "bumpp --commit --push --tag && pnpm publish",
+    "release": "HUSKY=0 bumpp --commit 'chore: v%s' --push --tag && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "check:type": "tsc --noEmit"
+  },
+  "homepage": "https://github.com/BuptStEve/pkg__name#readme",
+  "bugs": {
+    "url": "https://github.com/BuptStEve/pkg__name/issues"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.20.6",
+    "@antfu/eslint-config": "^0.20.7",
     "@antfu/ni": "^0.14.0",
     "@babel/types": "^7.17.0",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "@types/node": "^17.0.24",
+    "@types/node": "^17.0.25",
     "bumpp": "^7.1.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.13.0",
+    "eslint": "^8.14.0",
     "esno": "^0.14.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
@@ -66,7 +67,7 @@
     "typescript": "^4.6.3",
     "unbuild": "^0.7.4",
     "vite": "^2.9.5",
-    "vitest": "^0.9.3"
+    "vitest": "^0.9.4"
   },
   "lint-staged": {
     "**/*.{js,ts,json,md}": [
