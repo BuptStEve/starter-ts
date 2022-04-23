@@ -1,18 +1,18 @@
 {
-  "name": "[name]",
+  "name": "pkg__name",
   "version": "0.0.0",
   "packageManager": "pnpm@^6",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/BuptStEve/[name]#readme",
+  "homepage": "https://github.com/BuptStEve/pkg__name#readme",
   "bugs": {
-    "url": "https://github.com/BuptStEve/[name]/issues"
+    "url": "https://github.com/BuptStEve/pkg__name/issues"
   },
   "license": "MIT",
   "author": "StEve YoUng <2747745470@qq.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BuptStEve/[name].git"
+    "url": "git+https://github.com/BuptStEve/pkg__name.git"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
